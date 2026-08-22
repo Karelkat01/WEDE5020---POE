@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry - Fauna Cafe</title>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Interactive Logo -->
+
+        <a href="index.html">
+            <img src="images/logo.png" alt="Fauna Cafe (Pty) Ltd Official Logo" width="120" height="100">
+        </a>
+
+        <h1>Fauna Cafe (Pty) Ltd</h1>
+
+        <nav>
+            
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+            <a href="services.html">Services</a> | 
+            <a href="enquiry.html">Enquiry</a> | 
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Booking & Catering Enquiry</h1>
+
+        <p>Planning a corporate workshop, a team-building session, or need exclusive use of our meeting booths? Complete the comprehensive form below. Our events coordinator will respond within 24 hours.</p>
+        
+        <!-- Form structure aligned with W3C Web Accessibility Guidelines -->
+
+        <form action="#" method="post">
+            
+            <!-- Fieldset groups related inputs for better UX -->
+
+            <fieldset>
+
+                <legend>Client Information</legend>
+
+                <label for="fullName">Full Name:</label><br>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Jane Doe" required><br><br>
+                
+                <label for="email">Corporate Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required><br><br>
+
+                <label for="phone">Contact Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="082 123 4567"><br><br>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Event Details</legend>
+                
+                <!-- Dropdown Select -->
+
+                <label for="eventType">Nature of Booking:</label><br>
+
+                <select id="eventType" name="eventType" required>
+                    <option value="">-- Select an Option --</option>
+                    <option value="catering">External Catering</option>
+                    <option value="meetingBooth">Meeting Booth Reservation</option>
+                    <option value="fullVenue">Full Venue Hire</option>
+
+                </select><br><br>
+
+                <!-- Radio Buttons -->
+
+                <label>Preferred Time of Day:</label><br>
+                <input type="radio" id="morning" name="timeOfDay" value="Morning" required>
+                <label for="morning">Morning (06:00 - 12:00)</label><br>
+                <input type="radio" id="afternoon" name="timeOfDay" value="Afternoon">
+                <label for="afternoon">Afternoon (12:00 - 18:00)</label><br><br>
+
+                <!-- Checkboxes -->
+
+                <label>Dietary Requirements for Catering (Select all that apply):</label><br>
+                <input type="checkbox" id="vegan" name="diet" value="Vegan">
+                <label for="vegan">Vegan</label><br>
+                <input type="checkbox" id="glutenFree" name="diet" value="Gluten-Free">
+                <label for="glutenFree">Gluten-Free</label><br>
+                <input type="checkbox" id="nutFree" name="diet" value="Nut-Free">
+                <label for="nutFree">Nut-Free</label><br><br>
+
+                <label for="eventDate">Proposed Date:</label><br>
+                <input type="date" id="eventDate" name="eventDate" required><br><br>
+
+                <!-- Textarea -->
+
+                <label for="additionalNotes">Additional Specifications & Notes:</label><br>
+                <textarea id="additionalNotes" name="additionalNotes" rows="5" cols="50" placeholder="Please let us know about any specific AV equipment or setup requirements..."></textarea><br><br>
+            
+            </fieldset>
+
+            <!-- Submit and Reset -->
+
+            <input type="submit" value="Submit Enquiry">
+            <input type="reset" value="Clear Form">
+
+        </form>
+
+    </main>
+
+    <footer>
+
+        <p>Cyle Simmons | ST10543650 | Fauna Cafe (Pty) Ltd © 2026</p>
+
+    </footer>
+
+</body>
+
+</html>
