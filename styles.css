@@ -1,0 +1,556 @@
+/* FAUNA CAFE - STYLESHEET
+   WEDE5020 Assignment Part 2 : Visual Layout & Interactive Design */
+
+/* Core variables for consistent theme scaling and coloring */
+
+:root {
+    --forest-green: #2d5a27;
+    --leaf-light: #4caf50;
+    --earth-dark: #2c2a29;
+    --earth-brown: #D4A373;
+    --warm-cream: #F4F1DE;
+    --wood-accent: #8b5a2b;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-focus: rgba(76, 175, 80, 0.5);
+}
+
+/* Universal reset for consistency across browsers */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body content for all pages */
+
+body {
+    font-family: 'Aptos', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--warm-cream);
+    color: var(--earth-dark);
+    line-height: 1.6;
+    font-size: 1rem; /* Relative unit baseline */
+}
+
+/* Responsive image handling for all pages */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem; 
+}
+
+/* Typography styles for headings */
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    color: var(--forest-green);
+    text-align: center; 
+}
+
+/* Centers standard paragraphs inside the main content area */
+
+main p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Bullet points and numbered lists stay left-aligned for readability */
+
+ul, ol {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem; 
+}
+
+/* ANIMATIONS & INTERACTIVE EFFECTS */
+
+/* Fade-in animation for page load */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* 3D Pop-Out effect for Biophilic Cards */
+
+#biophilic-workspace article {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 10px var(--shadow-light);
+    border-top: 5px solid var(--leaf-light);
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease, 
+                border-color 0.3s ease;
+    cursor: pointer;
+}
+
+#biophilic-workspace article:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(45, 90, 39, 0.2);
+    border-top: 5px solid var(--forest-green);
+    z-index: 10;
+}
+
+/* Center images on Index (Hero) and About pages (Was an issue)*/
+
+#hero picture,
+#hero img,
+main article img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* HEADER & NAVIGATION */
+
+/* Header structure for all pages */
+
+header {
+    background-color: var(--forest-green);
+    color: var(--warm-cream);
+    padding: 1.2rem 3%;
+    border-bottom: 0.4rem solid var(--wood-accent);
+    
+    /* Grid layout: Column 1 (Logo), Column 2 (Title), Column 3 (Navigation) */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Container holding the logo image */
+
+header > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+header img {
+    height: 80px; 
+    width: auto;
+}
+
+header h1 {
+    color: var(--warm-cream);
+    font-size: 2rem;
+    margin: 0 0 0 1rem;
+    text-align: left;
+}
+
+/* Navigation layout as per the wireframe */
+
+nav {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: var(--warm-cream);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 0.3rem;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    background-color: var(--leaf-light);
+    transform: translateY(-2px);
+}
+
+nav a:focus {
+    outline: 2px solid var(--warm-cream);
+    outline-offset: 2px;
+    background-color: var(--leaf-light);
+}
+
+nav a:active {
+    background-color: var(--wood-accent);
+    transform: translateY(0);
+}
+
+/* MAIN CONTENT LAYOUT */
+
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 5%; 
+}
+
+section, article {
+    margin-bottom: 3rem;
+}
+
+/* HOME PAGE SPECIFIC STYLES */
+
+#hero {
+    text-align: center;
+}
+
+#hero img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+#biophilic-workspace div {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#biophilic-workspace article {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px var(--shadow-light);
+    border-top: 4px solid var(--leaf-light);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+#biophilic-workspace article:hover {
+    box-shadow: 0 8px 15px var(--shadow-light);
+}
+
+#biophilic-workspace article img {
+    margin: 0 auto 1rem auto;
+    width: 3.125rem; 
+}
+
+#featured-offerings ol {
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+}
+
+#featured-offerings li {
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+}
+
+/* ABOUT PAGE SPECIFIC STYLES */
+
+#staff-profiles {
+    margin-top: 4rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop/tablet */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.staff-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px var(--shadow-light);
+    border-top: 4px solid var(--wood-accent);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px var(--shadow-light);
+}
+
+.staff-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin: 0 auto 1rem auto;
+    border: 3px solid var(--leaf-light);
+}
+
+/* SERVICES PAGE SPECIFIC STYLES */
+
+.services-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.services-gallery img {
+    max-width: 45%;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px var(--shadow-light);
+    background-color: white;
+}
+
+caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--wood-accent);
+}
+
+th, td {
+    padding: 1.2rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--forest-green);
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(76, 175, 80, 0.05);
+}
+
+tbody tr:hover {
+    background-color: rgba(139, 90, 43, 0.1);
+}
+
+/* ENQUIRY PAGE SPECIFIC STYLES */
+
+form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    margin-top: 2rem;
+}
+
+fieldset {
+    border: 2px solid var(--forest-green);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--forest-green);
+    padding: 0 0.8rem;
+    font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--leaf-light);
+    box-shadow: 0 0 8px var(--shadow-focus);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    transform: scale(1.2);
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: var(--forest-green);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+input[type="reset"] {
+    background-color: var(--wood-accent);
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: var(--leaf-light);
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active {
+    transform: scale(0.98);
+}
+
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+    outline: 3px solid var(--earth-dark);
+    outline-offset: 2px;
+}
+
+/* CONTACT PAGE SPECIFIC STYLES */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "details map";
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-header { grid-area: header; }
+.contact-details { grid-area: details; }
+.contact-map { grid-area: map; }
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+address {
+    font-style: normal;
+    background: white;
+    padding: 1.5rem;
+    border-left: 4px solid var(--wood-accent);
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+address strong {
+    color: var(--forest-green);
+}
+
+iframe {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+/* FOOTER STYLING */
+
+footer {
+    text-align: center;
+    padding: 2.5rem;
+    background-color: var(--earth-brown);
+    color: var(--warm-cream);
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+/* Small Mobile Breakpoint (600px and down) */
+
+@media (max-width: 600px) {
+    
+    /* 1. Scales down all typography globally based on relative 'rem' units */
+
+    body {
+        font-size: 0.9rem; 
+    }
+
+    /* 2. Adjusts list padding for better readability on small screens */
+
+    ul, ol {
+        padding-left: 1.2rem;
+    }
+    
+    #featured-offerings ol {
+        margin-left: 0;
+    }
+
+    /* 3. Stacks the header and navigation vertically */
+
+    nav {
+        flex-direction: column;
+    }
+
+    /* 4. Stacks biophilic workspace cards into a single column for mobile */
+
+    #biophilic-workspace div {
+        grid-template-columns: 1fr;
+    }
+
+    /* 5. Stacks team member cards into a single column for mobile */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 6. Stacks the coffee art image and text into a single column for mobile */
+
+    .services-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-gallery img {
+        max-width: 100%;
+    }
+
+    /* 7. Form padding and button widths for better mobile usability */
+    
+    form {
+        padding: 1.2rem;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    /* 8. Tables are scrollable horizontally on small screens to prevent overflow issues */
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.85rem; /* Shrinks table text slightly more to fit better */
+    }
+}
+/* Cyle Simmons | ST10543695 | Fauna Cafe (Pty) Ltd 2026 */

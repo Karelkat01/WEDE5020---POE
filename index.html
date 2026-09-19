@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
 
+    <!-- Head section for the Home page -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Fauna Cafe (Pty) Ltd</title>
+
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
 
     <!-- Header & Navigation as per the wireframe row 1 -->
-    <!-- Reference: MDN Web Docs (2026) for semantic <header> and <nav> usage -->
 
     <header>
 
@@ -38,12 +41,15 @@
 
     <main>
 
-        <!-- HERO SECTION: Matches wireframe row 2 -->
-        <!-- Image sourced from Pexels. Alt text included for W3C accessibility -->
+        <!-- Matches wireframe row 2 -->
 
-        <section id="hero">
+       <section id="hero">
             
-            <img src="images/garden.jpg" alt="Botanical Cafe Interior with Floral Decor" width="800" height="400">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/garden_mobile.jpg">
+                <source media="(max-width: 1024px)" srcset="images/garden_tablet.jpg">
+                <img src="images/garden.jpg" alt="Botanical Cafe Interior with Floral Decor">
+            </picture>
 
             <h2>Where Nature Meets Productivity & Coffee</h2>
 
@@ -51,7 +57,7 @@
 
         </section>
 
-        <!-- BIOPHILIC WORKSPACE: Matches wireframe row 3 (The 3 Cards) -->
+        <!-- Matches wireframe row 3 (The 3 Cards) -->
 
         <section id="biophilic-workspace">
 
@@ -61,7 +67,7 @@
             
             <div>
 
-                <!-- Article tags used for self-contained UI cards -->
+                <!-- Article tags used for UI cards -->
 
                 <article>
                     <img src="images/plug_leaf.png" alt="Leaf and Plug Icon" width="50" height="50">
@@ -103,6 +109,8 @@
 
             <p>Whether you need a quick espresso or a dedicated boardroom, Fauna Cafe provides premium services tailored for remote workers:</p>
 
+            <!-- Ordered list for featured offerings, ensuring clarity and accessibility -->
+
             <ol>
                 <li><b>Artisanal Espresso & Pour-Overs:</b> Crafted by award-winning baristas using our signature organic blend.</li>
                 <li><b>Organic Bakery Selection:</b> Fresh croissants, vegan muffins, and gluten-free treats baked daily at 5 AM.</li>
@@ -115,7 +123,7 @@
     <!-- Footer as per wireframe row 5 -->
     <footer>
 
-        <p>Cyle Simmons | ST10543650 | Fauna Cafe (Pty) Ltd © 2026</p>
+        <p>Cyle Simmons | ST10543695 | Fauna Cafe (Pty) Ltd 2026</p>
 
     </footer>
 
