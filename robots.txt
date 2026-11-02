@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block search engines from indexing the backend scripts and CSS
+
+Disallow: /scripts.js
+Disallow: /styles.css
+
+# Point crawlers to the sitemap
+
+Sitemap: https://karelkat01.github.io/WEDE5020---POE/sitemap.xml

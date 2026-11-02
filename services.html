@@ -6,7 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Fauna Cafe</title>
+
+    <title>Menu & Workspace Pricing | Fauna Cafe</title>
+    
+    <meta name="description" content="Explore Fauna Cafe's artisanal digital menu, organic baked goods, and flexible workspace pricing plans tailored for remote professionals and students.">
+    <meta name="keywords" content="Fauna Cafe menu, digital workspace pricing, organic pastries, artisanal coffee menu, hot desking Cape Town">
 
     <link rel="stylesheet" href="styles.css">
 
@@ -47,6 +51,13 @@
             <img src="images/coffee_art.jpg" alt="Swan latte art on a freshly brewed cappuccino" width="300" height="400">
             <img src="images/outdoor_pastry.jpg" alt="Fresh croissants and artisanal coffee served on a glass table" width="300" height="400">
         </section>
+
+        <!-- Dynamic Search Filter -->
+
+        <div class="search-container">
+            <label for="menu-search"><strong>Find a menu item:</strong></label><br>
+            <input type="text" id="menu-search" placeholder="Search for coffee, matcha, pastries...">
+        </div>
 
         <!-- The table is properly structured for accessibility -->
 
@@ -129,6 +140,17 @@
         <p>Cyle Simmons | ST10543695 | Fauna Cafe (Pty) Ltd 2026</p>
 
     </footer>
+
+    <!-- Lightbox Modal (Hidden by default) -->
+
+    <div id="lightbox" class="lightbox-modal">
+
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged gallery image">
+
+    </div>
+    
+    <script src="scripts.js"></script>
 
 </body>
 

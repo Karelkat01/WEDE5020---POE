@@ -6,7 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry - Fauna Cafe</title>
+
+    <title>Bookings & Enquiries | Fauna Cafe Events</title>
+    
+    <meta name="description" content="Book your next event, reserve a dedicated workspace, or submit a catering enquiry with Fauna Cafe's easy online booking form.">
+    <meta name="keywords" content="Fauna Cafe booking, event space Cape Town, cafe catering, reserve workspace, cafe venue hire">
 
     <link rel="stylesheet" href="styles.css">
     
@@ -119,6 +123,34 @@
 
         </form>
 
+        <section id="booking-form">
+
+            <h2>Reserve Your Workspace or Event</h2>
+            
+            <!-- We added the ID here so JS can target it, and removed the action attribute so JS can intercept it -->
+            <form id="enquiry-form">
+                
+                <!-- This empty div is where JS will inject any error messages -->
+                <div id="form-errors" style="color: #d9534f; margin-bottom: 1rem; font-weight: bold;"></div>
+
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email"><br>
+                
+                <label for="request">Booking Request / Enquiry Details:</label><br>
+                <textarea id="request" name="request" rows="5"></textarea><br>
+                
+                <input type="submit" value="Submit Enquiry">
+                <input type="reset" value="Clear Form">
+            </form>
+
+        </section>
+
     </main>
 
     <footer>
@@ -126,6 +158,8 @@
         <p>Cyle Simmons | ST10543695 | Fauna Cafe (Pty) Ltd 2026</p>
 
     </footer>
+
+    <script src="scripts.js"></script>
 
 </body>
 

@@ -6,10 +6,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Fauna Cafe</title>
+
+    <title>Contact & Location | Fauna Cafe Cape Town</title>|
+    
+    <meta name="description" content="Find Fauna Cafe's location, operating hours, and contact details. Visit our biophilic workspace in Cape Town today.">
+    <meta name="keywords" content="Fauna Cafe location, contact Fauna Cafe, Cape Town cafe map, cafe opening hours, biophilic cafe address">
 
     <link rel="stylesheet" href="styles.css">
     
+    <!-- Leaflet.js Interactive Map -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
 
 <!-- Body content for the Contact page -->
@@ -81,10 +90,10 @@
             <h2>Our Location</h2>
             <p>Find us in the heart of the city, easily accessible via public transport with dedicated secure parking for workspace members.</p>
 
-            <!-- Embedded Google Map via iframe -->
+            <!-- Interactive Map Container -->
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.66!2d18.421!3d-33.924" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Google Maps Location for Fauna Cafe"></iframe>
-        
+            <div id="cafe-map"></div>
+
         </section>
 
     </main>
@@ -94,6 +103,8 @@
         <p>Cyle Simmons | ST10543695 | Fauna Cafe (Pty) Ltd 2026</p>
 
     </footer>
+
+    <script src="scripts.js"></script>
 
 </body>
 

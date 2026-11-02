@@ -45,7 +45,41 @@ This update introduces the external CSS stylesheet (`styles.css`), implementing 
 * `enquiry.html`: HTML form for event booking and catering requests.
 * `contact.html`: Embedded map, operating hours, and direct contact details.
 
+## Part 3 Details
+
+This final phase introduces interactive JavaScript capabilities and Search Engine Optimisation (SEO). 
+
+* **Functionality:** Implemented a dynamic image lightbox on the services page, an interactive Leaflet.js map on the contact page, dynamic table filtering and strict form validation for the enquiry submission. 
+* **SEO:** Added comprehensive meta descriptions, unique title tags, relevant keywords, a `robots.txt` file and an XML sitemap to ensure search engine visibility and correct crawler indexing.
+* **Deployment:** The site is successfully deployed and hosted live via GitHub Pages.
+
 ## Changelog
+
+**02 November 2026** 
+
+* To map site structure for web crawlers `sitemap.xml` was created. 
+* Repository set to public to accomodate GitHub Pages requirements. 
+* Deployed the final web application to a live production environment using GitHub Pages. 
+
+**24 October 2026** 
+
+* Configured On-Page SEO by applying unique `<title>`, `<meta name="description">`, and `<meta name="keywords">` tags across all five HTML pages. 
+* Created `robots.txt`  to define indexing rules. 
+
+**23 October 2026** 
+
+* Custom JavaScript (`scripts.js`) to validate the enquiry form, preventing default submission on empty or invalid inputs.
+
+**12 October**
+
+* Built a dynamic content search filter for the services table using `.includes()` and DOM manipulation.
+* Updated services.html to accomodate the search function.
+* Updated style.css to accomodate the search function.
+
+**04 October 2026**
+
+* Implemented an interactive image lightbox modal for the digital menu gallery proposed. 
+* Integrated Leaflet.js and ArcGIS map tiles to render a fully interactive, location-based map for the Contact page.
 
 **18 September 2026**
 
@@ -64,7 +98,6 @@ This update introduces the external CSS stylesheet (`styles.css`), implementing 
 **12 September 2026:** 
 
 * Amended staff profiles section as per the proposal under the about section 
-
 
 **10 September 2026:**
 
@@ -101,6 +134,16 @@ This update introduces the external CSS stylesheet (`styles.css`), implementing 
 * FreeFrontend, n.d *CSS Examples*. [Online] Available at: https://freefrontend.com/css-code-examples/ [Accessed 11 September 2026]
 * George, 2012 *Style Web Forms Using CSS*. [Online] Available at: https://www.sitepoint.com/style-web-forms-css/ [Accessed 13 September 2026]
 * Basques and Emelianova, 2024. *Simulate mobile devices with device mode*. [Online] Available at: https://developer.chrome.com/docs/devtools/device-mode [Accessed 18 September 2026]
+* W3schools, n.d. *How TO - Lightbox*. [Online] Availabile at: https://www.w3schools.com/howto/howto_js_lightbox.asp [Accessed 04 October 2026]
+* Leaflet, n.d. *Leaflet Quick Start Guide*.  [Online] Availabile at: https://leafletjs.com/examples/quick-start/ [Accessed 04 October 2026]
+* Leaflet, n.d. *Accessible maps*.  [Online] Availabile at: https://leafletjs.com/examples/accessibility/ [Accessed 04 October 2026]
+* Matheson, 2024. *Embed your maps from Map Viewer with ease*. [Online] Availabile at: https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/embed-2 [Accessed 04 October 2026]
+* Geeksforgeek, 2026. *JavaScript DOM Manipulation*. [Online] Available at: https://www.geeksforgeeks.org/javascript/how-to-manipulate-dom-elements-in-javascript/ [Accessed 12 October 2026]
+* Obgregon, 2023. *How to Build a Dynamic Search Feature with JavaScript Filters — A Quick Start Guide*. Available at: https://medium.com/@AlexanderObregon/how-to-build-a-dynamic-search-feature-with-javascript-filters-464b97038be1 [Accessed 12 October 2026]
+* Geeksforgeek, 2026. *JavaScript Form Validation*. [Online] Available at: https://www.geeksforgeeks.org/javascript/form-validation-using-javascript/ [Accessed 12 October 2026]
+* Obgregon, 2026. *Best Practices for SEO-friendly HTML5 Code — An Overview*. [Online] Available at: https://medium.com/@AlexanderObregon/best-practices-for-seo-friendly-html5-code-45130666be6e [Accessed 24 October 2026]
+* Google Search Central, n.d. *Introduction to robots.txt*. [Online] Available at: https://developers.google.com/search/docs/crawling-indexing/robots/intro [Accessed 24 October 2026]
+* Bulut, 2025. *Setting Up robots.txt and sitemap.xml Correctly for SEO and Hosting*. [Online] https://www.dchost.com/blog/en/setting-up-robots-txt-and-sitemap-xml-correctly-for-seo-and-hosting [Accessed 24 October 2026]
 
 ### Image references
 * Pexels, n.d. *Swan latte art on cappuccino cup in istanbul cafe*. [Online] Available at: https://www.pexels.com/photo/swan-latte-art-on-cappuccino-cup-in-istanbul-cafe-36895623/ [Accessed 15 August 2026].
@@ -112,3 +155,4 @@ This update introduces the external CSS stylesheet (`styles.css`), implementing 
 * Flaticon, n.d. *Coffee bean icon*. [Online] Available at: https://www.flaticon.com/free-icon/coffee-bean_8243960?term=coffee&page=1&position=83&origin=search&related_id=8243960 [Accessed 22 August 2026].
 * Pexels, n.d. *female barista in beanie and apron resting chin on had*. [Online] Available at: https://www.pexels.com/photo/female-barista-in-beanie-and-apron-resting-chin-on-had-4350057/ [Accessed 12 September 2026].
 * Pexels, n.d. *women wearing an apron*. [Online] Available at: https://www.pexels.com/photo/woman-wearing-an-apron-8426686/ [Accessed 12 September 2026].
+ 

@@ -483,7 +483,96 @@ footer {
     font-size: 0.9rem;
 }
 
+/* LIGHTBOX JS STYLES */
+
+.lightbox-modal {
+    display: none; /* Hidden by default, JS turns this to 'flex' */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease; /* Smooth pop-in effect */
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: var(--paper-white);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--wood-accent);
+}
+
+/* Make the existing gallery images clearly clickable */
+
+.services-gallery img {
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.services-gallery img:hover {
+    transform: scale(1.02);
+    opacity: 0.85;
+}
+
 /* Small Mobile Breakpoint (600px and down) */
+
+/* INTERACTIVE MAP STYLES */
+
+#cafe-map {
+    height: 400px;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 2px solid var(--wood-accent);
+    margin-bottom: 2rem;
+    z-index: 1; /* Keeps the map behind your navigation menu and lightboxes */
+}
+
+/* DYNAMIC SEARCH BAR STYLES */
+
+.search-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#menu-search {
+    width: 80%;
+    max-width: 400px;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 2px solid var(--leaf-light);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#menu-search:focus {
+    border-color: var(--wood-accent);
+}
 
 @media (max-width: 600px) {
     
